@@ -151,7 +151,7 @@ Corrigez la classe en ajoutant l'attribut resolution qui manque, ainsi que l'acc
 
 #### Faites du bruit, mais aléatoire
 
-Réalisez maintenant la classe `BruitAleatoire`. Cette classe étant la classe précédente, mais ne fait rien de bien folichon. Elle se contente d'utiliser la classe `Random` de base de Java pour produire un nombre aléatoire (qui ne dépend même pas de x et de y - c'est un comble !).
+Réalisez maintenant la classe `BruitAleatoire`. Cette classe étend la classe précédente, mais ne fait rien de bien folichon. Elle se contente d'utiliser la classe `Random` de base de Java pour produire un nombre aléatoire (qui ne dépend même pas de x et de y - c'est un comble !).
 
 Regardez bien la documentation de `Random`. L'implémentation de la classe est triviale.
 
