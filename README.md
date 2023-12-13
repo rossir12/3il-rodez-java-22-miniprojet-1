@@ -7,7 +7,7 @@ date: 3iL 1A 2023
 
 **Date de rendu du projet : 22/02/2024**
 
-**Formulaire de rendu :** [ici]((https://framaforms.org/rendu-du-miniprojet-1-1702438510))
+**Formulaire de rendu :** [ici](https://framaforms.org/rendu-du-miniprojet-1-1702438510)
 
 # Bienvenue dans votre projet
 
@@ -15,7 +15,7 @@ date: 3iL 1A 2023
 
 - Il vous est demandé de bien *commenter* et de bien réaliser la documentation (au format Javadoc) de vos fichiers.
 - Pensez à commiter & pusher votre travail ***de façon régulière***.
-- Les messages de vos commits sont essentiels (pas de "lol ça marche", "ENFIN!!!!", "toto", ou autres). Soyez clairs (vous pouvez vous inspirer de [cette norme](https://buzut.net/cours/versioning-avec-git/bien-nommer-ses-commits).
+- Les messages de vos commits sont essentiels (pas de "lol ça marche", "ENFIN!!!!", "toto", ou autres). Soyez clairs (vous pouvez vous inspirer de [cette norme](https://buzut.net/cours/versioning-avec-git/bien-nommer-ses-commits)).
 - N'oubliez pas de réaliser des tests unitaires afin de valider votre code au fur et à mesure de votre production. Essayez d'en réaliser au moins un par partie demandée.
 
 ## Structure du rendu
