@@ -203,7 +203,7 @@ Voici les terrains que l'on souhaite pouvoir manipuler :
 
 On pourrait, par exemple, construire une classe pour chaque, qui hériterait de `Terrain`, comme classe mère.
 
-Question : Réaliser l'architecture que prendrait la forme d'une telle modélisation sous forme d'un diagramme UML. Quelle serait la différence d'attributs et de méthodes entre ces classes ? Expliquer, en s'appuyant sur un exercice vu en cours, pourquoi c'est une mauvaise idée. Quelle est la solution qu'il faudrait préférer (et que l'on va préférer) ?
+**Question :** Réaliser l'architecture que prendrait la forme d'une telle modélisation sous forme d'un diagramme UML. Quelle serait la différence d'attributs et de méthodes entre ces classes ? Expliquer, en s'appuyant sur un exercice vu en cours, pourquoi c'est une mauvaise idée. Quelle est la solution qu'il faudrait préférer (et que l'on va préférer) ?
 
 ### Modélisons le (type de) terrain
 
@@ -231,7 +231,7 @@ La plupart des jeux de type bac à sable utilisent trois valeurs pour générer 
 
 Créez la classe `Terrain` qui comportera trois accesseurs (un pour l'hydrométrie, un pour la température, et un pour l'altitude) - `getHydrometrie`, `getTemperature` et `getAltitude`. On veut pouvoir rentrer des informations décimales suffisamment précises (au moins en double précision).
 
-Question : quel type utilisez-vous ?
+**Question :** quel type utilisez-vous ?
 
 Pour des raisons de simplification, on **ne veut pas** que les valeurs de ces caractéristiques soient faites "à la louche". On s'assurera donc de les limiter : l'hydrométrie et la température doivent être comprises entre 0 et 1, l'altitude entre -1 et 1. On lèvera l'exception `MauvaiseValeurException` si une condition n'est pas respectée. L'exception en question héritera d'une exception **qui détermine qu'un argument est illégal**.
 
@@ -251,7 +251,7 @@ En utilisant le patron Visiteur, vous pouvez séparer le code lié à la manipul
 
 Dans notre cas, on veut pouvoir déterminer le type de terrain en fonction des trois caractéristiques, mais on veut éviter de modifier la classe à chaque fois qu'on change de détermination - on a donc un Visiteur qui s'en occupe.
 
-Question : pourquoi sortir, selon vous, ce bout d'algorithme de la classe ?
+**Question :** pourquoi sortir, selon vous, ce bout d'algorithme de la classe ?
 
 ### JE SUIS LA CARTE
 
