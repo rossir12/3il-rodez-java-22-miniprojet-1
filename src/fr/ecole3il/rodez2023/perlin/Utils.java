@@ -68,7 +68,7 @@ public class Utils {
      */
     public static double min(int width, int height) {
     	// pas le temps, j'ai mes exos de chimie à finir
-    	return 1;
+    	return Math.min(width, height);
     }
 
     /**

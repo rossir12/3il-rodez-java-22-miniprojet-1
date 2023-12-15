@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
+import java.io.Serializable;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -15,15 +16,15 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
 import fr.ecole3il.rodez2023.perlin.math.BruitPerlin2D;
-
 /**
  * 
  * @author proussille
  * Classe représentant une fenêtre pour générer des images de bruit de Perlin.
  */
-public class VisualiseurBruitPerlin extends JFrame {
+public class VisualiseurBruitPerlin extends JFrame implements Serializable {
 
     // Constantes définissant la taille par défaut de l'image
+	private static final long serialVersionUID = 1L;
     private static final int WIDTH = 400;
     private static final int HEIGHT = 400;
     private static final double DEFAULT_RESOLUTION = 1.0f;
@@ -100,7 +101,7 @@ public class VisualiseurBruitPerlin extends JFrame {
      */
     private void generateImage() {
         String seedText = seedField.getText();
-        long seed = seedText.isEmpty() ? System.currentTimeMillis() : Long.parseLong(seedText);
+        long graine = seedText.isEmpty() ? System.currentTimeMillis() : Long.parseLong(seedText);
 
         double resolution = DEFAULT_RESOLUTION;
         try {
@@ -109,11 +110,10 @@ public class VisualiseurBruitPerlin extends JFrame {
             // Utilise la résolution par défaut si la valeur entrée n'est pas valide
         }
         
-        
-        ////////// CODE À MODIFIER 
-        noiseImage = new truc;
-        
-        ////////// FIN CODE À MODIFIER
+        // Créer une instance de BruitPerlin2D avec la graine et la résolution
+        BruitPerlin2D bruitPerlin = new BruitPerlin2D(graine,resolution);
+        // Créer une instance de ImageBruit avec le bruitPerlin
+        noiseImage = new ImageBruit(bruitPerlin);
         tickImageButton.setEnabled(true); // Désactiver le bouton initialement
         tickImage();
     }
