@@ -1,7 +1,6 @@
 package fr.ecole3il.rodez2023.perlin.terrain.elements;
 import fr.ecole3il.rodez2023.perlin.terrain.visualisation.DetermineurTerrain;
 
-
 public class Terrain {
     private double hydrometrie;
     private double temperature;
