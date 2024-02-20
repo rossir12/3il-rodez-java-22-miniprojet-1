@@ -22,8 +22,9 @@ public class ManipulateurCarte {
      */
     public static Carte chargerCarte(String cheminFichier) {
         String contenu = Utils.lireContenuFichier(cheminFichier);
-        GenerateurCarte generateurCarte = ...;
-        return new Carte(nom,largeur,hauteur,generateurCarte);
+       // GenerateurCarte generateurCarte = ...;
+        //return new Carte(nom,largeur,hauteur,generateurCarte);
+        return null;
     }
     
     /**

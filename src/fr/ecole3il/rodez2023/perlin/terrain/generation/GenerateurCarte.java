@@ -1,6 +1,7 @@
 package fr.ecole3il.rodez2023.perlin.terrain.generation;
 
 import fr.ecole3il.rodez2023.perlin.terrain.elements.Terrain;
+import fr.ecole3il.rodez2023.perlin.terrain.elements.MauvaiseValeurException;
 
 /**
  * Cette classe abstraite représente un générateur de carte utilisant la méthode Perlin
@@ -20,6 +21,7 @@ public abstract class GenerateurCarte {
         this.graine = graine;
     }
 
+
     /**
      * Génère une carte représentée par un tableau de terrains en utilisant la méthode Perlin.
      *
@@ -27,7 +29,7 @@ public abstract class GenerateurCarte {
      * @param hauteur La hauteur de la carte.
      * @return Un tableau bidimensionnel de terrains représentant la carte générée.
      */
-    public Terrain[][] genererCarte(int largeur, int hauteur) {
+    public Terrain[][] genererCarte(int largeur, int hauteur) throws MauvaiseValeurException {
         Terrain[][] terrains = new Terrain[largeur][hauteur];
         for (int i = 0; i < largeur; i++) {
             for (int j = 0; j < hauteur; j++) {
@@ -46,7 +48,7 @@ public abstract class GenerateurCarte {
      * @param hauteur  La hauteur totale de la carte.
      * @return Le terrain généré pour la position spécifiée.
      */
-    public abstract Terrain genererTerrain(int i, int j, int largeur, int hauteur);
+    public abstract Terrain genererTerrain(int i, int j, int largeur, int hauteur) throws MauvaiseValeurException;
 
     /**
      * Obtient la graine utilisée pour la génération de la carte.

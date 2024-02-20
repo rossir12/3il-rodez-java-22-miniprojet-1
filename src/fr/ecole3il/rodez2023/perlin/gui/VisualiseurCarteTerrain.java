@@ -24,6 +24,7 @@ import javax.swing.SwingUtilities;
 import fr.ecole3il.rodez2023.perlin.terrain.carte.Carte;
 import fr.ecole3il.rodez2023.perlin.terrain.carte.ManipulateurCarte;
 import fr.ecole3il.rodez2023.perlin.terrain.concrets.VisualiseurTerrainEnonce;
+import fr.ecole3il.rodez2023.perlin.terrain.elements.MauvaiseValeurException;
 import fr.ecole3il.rodez2023.perlin.terrain.elements.TypeTerrain;
 import fr.ecole3il.rodez2023.perlin.terrain.generation.GenerateurAleatoire;
 import fr.ecole3il.rodez2023.perlin.terrain.generation.GenerateurPerlin;
@@ -213,14 +214,28 @@ public class VisualiseurCarteTerrain extends JFrame {
 			long graine = Long.parseLong(graineAlea.getText());
 			String generateurSelectionne = (String) generateurBox.getSelectedItem();
 
-			// Code pour générer la carte en fonction des paramètres choisis
-			if (generateurSelectionne.equals("GenerateurPerlin")) {
-				carte = new Carte("Nouvelle carte", largeur, hauteur, new GenerateurPerlin(graine));
-			} else {
-				carte = new Carte("Nouvelle carte", largeur, hauteur,
-						new GenerateurAleatoire(graine));
-			}
 
+				// Code pour générer la carte en fonction des paramètres choisis
+			try {
+				if (generateurSelectionne.equals("GenerateurPerlin")) {
+					double resolution = 1.0;
+					String resolutionStr = JOptionPane.showInputDialog(null, "Entrez la résolution : ", "Résolution", JOptionPane.QUESTION_MESSAGE);
+					if(resolutionStr != null && !resolutionStr.isEmpty()) {
+						try {
+							resolution = Double.parseDouble(resolutionStr);
+						} catch (NumberFormatException ex) {
+							JOptionPane.showMessageDialog(null, "La résolution entrée n'est pas valide. Utilisation de la résolution par défaut (1.0). ", "Erreur", JOptionPane.ERROR_MESSAGE);
+						}
+					}
+					carte = new Carte("Nouvelle carte", largeur, hauteur, new GenerateurPerlin(graine, resolution));
+				} else {
+					carte = new Carte("Nouvelle carte", largeur, hauteur,
+							new GenerateurAleatoire(graine));
+				}
+			} catch (MauvaiseValeurException e) {
+				JOptionPane.showMessageDialog(null, "Une mauvaise valeur a été détectée lors de la génération de la carte.", "Erreur", JOptionPane.ERROR_MESSAGE);
+				repaint();
+			}
 			repaint();
 		}
 	}

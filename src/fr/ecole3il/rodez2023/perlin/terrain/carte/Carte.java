@@ -12,7 +12,7 @@ public class Carte {
     private int hauteur;
     private Terrain[][] terrains;
 
-    public Carte(String nom, int largeur, int hauteur, GenerateurCarte generateurCarte) {
+    public Carte(String nom, int largeur, int hauteur, GenerateurCarte generateurCarte) throws MauvaiseValeurException {
         this.nom = nom;
         this.largeur = largeur;
         this.hauteur = hauteur;
@@ -61,8 +61,8 @@ public class Carte {
         return hauteur;
     }
 
-    public Terrain getTerrain(int x, int y, int largeur, int hauteur) throws TerrainInexistantException {
-        if (x < 0 || x >= largeur || y < 0 || y >= hauteur) {
+    public Terrain getTerrain(int x, int y) throws TerrainInexistantException {
+        if (x < 0 || x >= this.largeur || y < 0 || y >= this.hauteur) {
             throw new TerrainInexistantException("Coordonnées hors des limites de la carte.");
         }
         return terrains[x][y];
