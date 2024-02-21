@@ -4,7 +4,11 @@ public enum TemperatureAffichee {
     // Enumeration des différentes catégories de températures affichées
     FROID, TEMPERE, CHAUD;
 
-    // Méthode static pour d"terminer la catégorie de température en fonction d'une valeur donnée
+    /**
+     * Méthode static pour déterminer la catégorie de température en fonction d'une valeur donnée
+     * @param temperature La valeur de la température
+     * @return  La catégorie de la température correspondante
+      */
     public static TemperatureAffichee determinerTemperature(double temperature) {
         // Si la température est inférieur à 0.33, elle est froide
         if (temperature < 0.33) return FROID;

@@ -4,6 +4,11 @@ public enum AltitudeAffichee {
     // Enumération des différentes catégories d'altitude
     FOND_MARIN, BASSE, MOYENNE, ELEVEE;
 
+    /**
+     * Méthode static pour déterminer la catégorie de l'altitude en fonction d'une valeur donnée
+     * @param altitude La valeur de l'altitude
+     * @return  La catégorie de l'altitude correspondante
+     */
     public static AltitudeAffichee determinerAltitude(double altitude) {
         // Si l'altitude est négative, affiche Fond_marin
         if (altitude < 0) return FOND_MARIN;

@@ -4,6 +4,11 @@ public enum HydrometrieAffichee {
     // Enumération des différentes catégories pour l'hydrométrie
     SEC, MOYEN, HUMIDE;
 
+    /**
+     * Méthode static pour déterminer la catégorie de l'hydrometrie en fonction d'une valeur donnée
+     * @param hydrometrie La valeur de l'hydrometrie
+     * @return  La catégorie de l'hydrometrie correspondante
+     */
     public static HydrometrieAffichee determinerHydrometrie(double hydrometrie) {
         // Si l'hydrométrie est inférieur à 0.33, affiche sec
         if (hydrometrie < 0.33) return SEC;
