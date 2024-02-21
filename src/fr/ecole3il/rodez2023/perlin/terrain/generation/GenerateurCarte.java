@@ -9,7 +9,7 @@ import fr.ecole3il.rodez2023.perlin.terrain.elements.MauvaiseValeurException;
  * @author proussille
  */
 public abstract class GenerateurCarte {
-
+    // Attribut pour stocker la graine utilisée lors de la génération
     private final long graine;
 
     /**
@@ -28,6 +28,7 @@ public abstract class GenerateurCarte {
      * @param largeur La largeur de la carte.
      * @param hauteur La hauteur de la carte.
      * @return Un tableau bidimensionnel de terrains représentant la carte générée.
+     * @throws  MauvaiseValeurException Si une valeur générée pour le terrain n'est pas valide
      */
     public Terrain[][] genererCarte(int largeur, int hauteur) throws MauvaiseValeurException {
         Terrain[][] terrains = new Terrain[largeur][hauteur];
@@ -47,6 +48,7 @@ public abstract class GenerateurCarte {
      * @param largeur  La largeur totale de la carte.
      * @param hauteur  La hauteur totale de la carte.
      * @return Le terrain généré pour la position spécifiée.
+     * @throws  MauvaiseValeurException Si les valeurs utilisées pour générer le terrain ne sont pas valides
      */
     public abstract Terrain genererTerrain(int i, int j, int largeur, int hauteur) throws MauvaiseValeurException;
 
