@@ -99,12 +99,7 @@ Dans notre cas, on veut pouvoir déterminer le type de terrain en fonction des t
 Dans notre cas, cela nous permet d'ajouter de nouvelles façons de déterminer le type de terrain sans avoir à modifier la classe qui contient les caractéristiques.**
 
 
-# Annexe du mini-projet 
-
-Auteur ` Romain Rossi`
-
-Soutiens ` Alexandre Kroll, Tom Delalande, Camille Mountahir, Nessrine Ranem` __*ChatGPT*__
-
+# Annexe du mini-projet
 
 Technologie utilisée **Intellij IDEA 2023.3.4**
 
