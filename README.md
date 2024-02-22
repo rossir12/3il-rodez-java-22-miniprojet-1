@@ -97,3 +97,19 @@ Dans notre cas, on veut pouvoir déterminer le type de terrain en fonction des t
 
 **Utiliser un `Patron Visiteur` pour séparer l'algorithme de la classe principale permet de faciliter le programme.
 Dans notre cas, cela nous permet d'ajouter de nouvelles façons de déterminer le type de terrain sans avoir à modifier la classe qui contient les caractéristiques.**
+
+
+# Annexe du mini-projet 
+
+Auteur ` Romain Rossi`
+
+Soutiens ` Alexandre Kroll, Tom Delalande, Camille Mountahir, Nessrine Ranem` __*ChatGPT*__
+
+
+Technologie utilisée **Intellij IDEA 2023.3.4**
+
+## Génération
+GénérateurAleatoire **Fonctionnel**
+
+GénérateurPerlin **Non-Fonctionnel**
+
