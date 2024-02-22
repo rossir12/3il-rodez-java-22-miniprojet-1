@@ -43,7 +43,12 @@ Expliquer, en s'appuyant sur un exercice vu en cours, pourquoi c'est une mauvais
 Quelle est la solution qu'il faudrait préférer (et que l'on va préférer) ?**
 
 ### `Réponse`
-![img.png](img.png)
+
+**Créer une classe `Terrain` qui peut changer son comportement en fonction du type permet de ne pas séparer chaque type de terrain.
+Cette façon de procéder permet de simplifier le code lorsqu'on souhaite le modifier.**
+
+
+![img_1.png](img_1.png)
 
 ### Modélisons le (type de) terrain
 
